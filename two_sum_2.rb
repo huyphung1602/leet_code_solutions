@@ -31,3 +31,23 @@ def two_sum_binary(numbers, target)
 
   raise ArgumentError.new("No two sum solution")
 end
+
+# Implement two_sum use 2 pointers. O(n)
+def two_sum_2_pointers(numbers, target)
+  l_pointer = 0
+  r_pointer = numbers.size - 1
+
+  while l_pointer < r_pointer
+    sum = numbers[l_pointer] + numbers[r_pointer]
+
+    if sum < target
+      l_pointer += 1
+    elsif sum > target
+      r_pointer -= 1
+    else
+      return [l_pointer + 1, r_pointer + 1]
+    end
+  end
+
+  raise ArgumentError.new("No two sum solution")
+end
