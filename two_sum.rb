@@ -6,10 +6,12 @@ def two_sum(nums, target)
   hash = {}
   
   nums.each_with_index do |num, index|
+    # +1 because we do both index1 and index2 are not zero-based
+    one_based_index = index + 1
+
     unless hash[target-num].nil?
-      # +1 because we do both index1 and index2 are not zero-based
-      return [hash[target-num] + 1, index + 1]
+      return [hash[target-num], one_based_index]
     end  
-    hash[num] = index
+    hash[num] = one_based_index
   end
 end
