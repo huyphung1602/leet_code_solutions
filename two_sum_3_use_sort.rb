@@ -7,37 +7,42 @@
 
 # This method is useful if the number of find operations far exceeds the number of add operations.
 
-## Using hash table -- find O(1), store O(n^2)
+## add – O(1) runtime, find – O(n log n) runtime, O(n) space – Sort + Two pointers:
+
 class TwoSum
   class << self
     def add(value)
-      if hash_table[value].nil?
-        hash_table[value] = 1
-      else
-        hash_table[value] += 1
-      end
+      array << value
     end
 
     def find(total_value)
-      hash_table.each do |value, count|
-        remain_value = total_value - value
-        if remain_value == value
-          return true if count >= 2
+      sorted_array = array.sort
+
+      l_pointer = 0
+      r_pointer = sorted_array.size - 1
+
+      while l_pointer < r_pointer
+        sum = sorted_array[l_pointer] + sorted_array[r_pointer]
+
+        if sum < total_value
+          l_pointer += 1
+        elsif sum > total_value
+          r_pointer -= 1
         else
-          return true unless hash_table[remain_value].nil?
+          return true
         end
       end
 
       false
     end
 
-    def hash_table
-      @@hash_map
+    def array
+      @@array
     end
 
     private
 
-    @@hash_map = {}
+    @@array = []
   end
 end
 
@@ -46,7 +51,7 @@ TwoSum.add(1)
 TwoSum.add(1)
 TwoSum.add(2)
 TwoSum.add(3)
-puts TwoSum.hash_table
+puts TwoSum.array.inspect
 puts 'Find 5'
 puts TwoSum.find(5)
 puts 'Find 2'
