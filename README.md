@@ -1,7 +1,10 @@
 # leet_code_solutions
 
-## Algorithms
+## Sorts
 - Heap sort
+
+## Binary Tree
+- Symetric Tree Recursive way
 
 ## Problems on leetcode
 - Two sum
