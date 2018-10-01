@@ -4,6 +4,7 @@
 - Heap sort
 
 ## Binary Tree
+- Pre-order Traversal
 - Symetric Tree Recursive way
 
 ## Problems on leetcode
