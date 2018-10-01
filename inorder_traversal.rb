@@ -63,3 +63,42 @@ def inorder_traversal(root)
 
   result
 end
+
+# Morris Traversal: Inorder Tree Traversal without recursion and without stack
+
+# Tree traversal is often implemented using Stack or Recursion. In this case, the space complexity is O(h),
+# where h is the height of the tree. We describe a method based on Morris Traversal for tree traversal using
+# O(1) space.
+# The basic idea of Morris Traversal is that: For current Node Cur, we use the right most leaf of its left
+# child to record the location of Cur.
+
+def morris_traversal(root)
+  result = []
+  return result if root.nil?
+
+  current_node = root
+
+  until current_node.nil?
+    if current_node.left.nil?
+      result << current_node.val
+      current_node = current_node.right
+    else
+      pre_node = current_node.left
+
+      while (!pre_node.right.nil? && pre_node.right != current_node)
+        pre_node = pre_node.right
+      end
+
+      if pre_node.right == current_node
+        pre_node.right = nil
+        result << current_node.val
+        current_node = current_node.right
+      else
+        pre_node.right = current_node
+        current_node = current_node.left
+      end
+    end
+  end
+
+  result
+end

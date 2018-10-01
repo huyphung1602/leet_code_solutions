@@ -6,6 +6,7 @@
 ## Binary Tree
 - Pre-order Traversal
 - In-order Traversal
+- In-order Traversal using Morris Traversal
 - Symetric Tree Recursive way
 
 ## Problems on leetcode
