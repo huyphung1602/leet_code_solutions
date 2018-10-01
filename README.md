@@ -5,6 +5,7 @@
 
 ## Binary Tree
 - Pre-order Traversal
+- In-order Traversal
 - Symetric Tree Recursive way
 
 ## Problems on leetcode
