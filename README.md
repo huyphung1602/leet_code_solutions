@@ -7,7 +7,8 @@
 - Pre-order Traversal
 - In-order Traversal
 - In-order Traversal using Morris Traversal
-- Post-order Traversal
+- Post-order Traversal using 2 stacks
+- Post-order Traversal using 1 stack
 - Symetric Tree Recursive way
 
 ## Problems on leetcode

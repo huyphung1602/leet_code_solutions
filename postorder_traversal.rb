@@ -28,7 +28,7 @@ def postorder_traversal(root, array = [])
   end
 end
 
-# Iterative way - Using two stack. O(h) run time, O(n) space
+# Iterative way - Using two stacks. O(h) run time, O(n) space
 def postorder_traversal(root)
   return [] if root.nil?
 
@@ -44,4 +44,38 @@ def postorder_traversal(root)
   end
 
   stack_2.reverse
+end
+
+# Iterative way - Using one stack. O(h) run time, O(n) space
+
+# iterative 1 stack
+def postorder_traversal(root)
+  result = []
+  return result if root.nil?
+
+  stack = []
+  stack << root.right if root.right
+  stack << root
+  root = root.left
+
+  until stack.empty?
+    unless root.nil?
+      stack << root.right if root.right
+      stack << root
+      root = root.left
+    else
+      root = stack.pop
+
+      if root.right && root.right == stack.last
+        stack.pop
+        stack << root
+        root = root.right
+      else
+        result << root.val
+        root = nil
+      end
+    end
+  end
+
+  result
 end
