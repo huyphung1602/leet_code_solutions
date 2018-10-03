@@ -10,6 +10,7 @@
 - Post-order Traversal using 2 stacks
 - Post-order Traversal using 1 stack
 - Symetric Tree Recursive way
+- Path sum Recursive way
 
 ## Problems on leetcode
 - Two sum
