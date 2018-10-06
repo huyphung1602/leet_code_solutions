@@ -19,9 +19,9 @@
 class TreeNode
   attr_accessor :val, :left, :right
   def initialize(val, left = nil, right = nil)
-      @val = val
-      @left = left
-      @right = right
+    @val = val
+    @left = left
+    @right = right
   end
 end
 
@@ -48,7 +48,7 @@ def build_tree(preorder, inorder)
     node.left = build_tree(left_preorder, left_inorder)
   end
 
-  unless right_preorder.empty? 
+  unless right_preorder.empty?
     node.right = build_tree(right_preorder, right_inorder)
   end
 

@@ -17,12 +17,12 @@
 
 # Definition for a binary tree node.
 class TreeNode
-    attr_accessor :val, :left, :right
-    def initialize(val, left = nil, right = nil)
-        @val = val
-        @left = left
-        @right = right
-    end
+  attr_accessor :val, :left, :right
+  def initialize(val, left = nil, right = nil)
+    @val = val
+    @left = left
+    @right = right
+  end
 end
 
 # @param {Integer[]} inorder
@@ -51,7 +51,7 @@ def build_tree(inorder, postorder)
     node.left = build_tree(left_inorder, left_postorder)
   end
 
-  unless right_postorder.empty? 
+  unless right_postorder.empty?
     node.right = build_tree(right_inorder, right_postorder)
   end
 
