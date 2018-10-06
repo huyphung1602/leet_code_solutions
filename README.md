@@ -12,6 +12,7 @@
 - `Symetric Tree` Recursive way
 - `Path sum` Recursive way
 - Build `Binary Tree` from `inorder` and `postorder` traversal
+- Build `Binary Tree` from `preorder` and `inorder` traversal
 
 ## Problems on leetcode
 - `Two sum`
