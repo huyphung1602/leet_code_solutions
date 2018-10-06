@@ -29,18 +29,20 @@ def heapsort(array)
   heap_size = array.size
 
   #Build a max heap
-  (0..heap_size).reverse_each do |root_index|
+  (0..heap_size-1).reverse_each do |root_index|
     heapify(array, heap_size, root_index)
   end
 
   # One by one exact elements
-  (0..(heap_size - 1)).reverse_each do |index|
+  (1..(heap_size - 1)).reverse_each do |index|
     array[index], array[0] = array[0], array[index]
     heapify(array, index, 0)
   end
+
+  array
 end
 
-## Run this can help you understand about the heapify
+# # Run this can help you understand about the heapify
 # array = [4, 10, 3, 5, 1]
 # heap_size = array.size
 # puts array.inspect
@@ -56,7 +58,7 @@ end
 # heapify(array, heap_size, 0)
 # puts array.inspect
 
-## Run this to understand the one by one exact elements
+# Run this to understand the one by one exact elements
 # array = [10, 5, 3, 4, 1]
 # puts array.inspect
 
@@ -72,3 +74,6 @@ end
 # array[1], array[0] = array[0], array[1]
 # heapify(array, 1, 0)
 # puts array.inspect
+
+array = [10, 5, 3, 4, 1]
+puts heapsort(array).inspect
