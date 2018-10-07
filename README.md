@@ -14,6 +14,7 @@
 - Build `Binary Tree` from `inorder` and `postorder` traversal
 - Build `Binary Tree` from `preorder` and `inorder` traversal
 - Find `path` from root to the `specific node` + `lowest common ancestor`
+- `Serialize` and `Deserialize`
 
 ## Problems on leetcode
 - `Two sum`
