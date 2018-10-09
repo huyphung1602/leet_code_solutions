@@ -24,3 +24,4 @@
 - `Add Two Number`
 - Length of `longest substring` - O(n) 2 loops, O(1) space
 - Length of `longest substring` - O(n) 1 loops, O(1) space
+- Next `permutation` O(n), in space
