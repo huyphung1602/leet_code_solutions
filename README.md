@@ -25,4 +25,6 @@
 - Length of `longest substring` - O(n) 2 loops, O(1) space
 - Length of `longest substring` - O(n) 1 loops, O(1) space
 - Next `permutation` O(n), in space
-- Find `median of two sorted array same size` Olog(n), n is size of array
+- Find `median of two sorted arrays, same size` Olog(n), n is size of array
+- Find `median of two sorted arrays, different size` Olog(n), n is size of array
+- Reverse `Integer`
