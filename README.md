@@ -28,3 +28,4 @@
 - Find `median of two sorted arrays, same size` Olog(n), n is size of array
 - Find `median of two sorted arrays, different size` Olog(n), n is size of array
 - Reverse `Integer`
+- Check `Palindrome`

@@ -18,17 +18,36 @@
 # @param {Integer} x
 # @return {Integer}
 def reverse(x)
-  reverse = 0
+  rev = 0
+  a = 1
+  if x < 0
+    a = -1
+    x = -x
+  end
+
 
   while x > 0
     pop = x % 10
     x /= 10
-    reverse = reverse * 10 + pop
+    rev = rev * 10 + pop
   end
 
-  reverse
+  rev = rev * a
+  if (rev >= 2**31 - 1) || (rev <=  -2**31)
+    0
+  else
+    rev
+  end
 end
 
 x = 12345677
+puts x
+puts reverse(x).inspect
 
+x = -123
+puts x
+puts reverse(x).inspect
+
+x = 1534236469
+puts x
 puts reverse(x).inspect
