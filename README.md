@@ -29,3 +29,5 @@
 - Find `median of two sorted arrays, different size` Olog(n), n is size of array
 - Reverse `Integer`
 - Check `Palindrome`
+- My `String to Integer`
+- Merge sort `Linked List`, O(n logn)
