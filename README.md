@@ -32,4 +32,4 @@
 - My `String to Integer`
 - Merge sort `Linked List`, O(n logn)
 - Integer to `Roman`
-- `Max Number` by digits from two given Array
+- `Max Number` by digits from `two given arrays`
