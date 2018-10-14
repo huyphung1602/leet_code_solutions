@@ -219,5 +219,7 @@ end
 # result = max_number(nums1, nums2, k)
 # puts "Result = #{result.inspect}"
 
-# array = [8, 7, 3, 6, 8]
+# array = [8, 7, 3, 6, 1, 0, 8]
+# puts max_array(array, 2).inspect
+# array = [8, 7, 6, 5, 4, 3, 4, 5, 6, 7, 8]
 # puts max_array(array, 2).inspect
