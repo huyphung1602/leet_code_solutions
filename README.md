@@ -32,4 +32,7 @@
 - My `String to Integer`
 - Merge sort `Linked List`, O(n logn)
 - Integer to `Roman`
-- `Max Number` by digits from `two given arrays`
+- `Max Number` by digits from `two given arrays` (**optimized**)
+- `Third maximum numbers`
+- Find `kth largest number`
+- Remove `k digits` to return the `smallest number` (**optimized**)

@@ -60,31 +60,56 @@
 #   result
 # end
 
+# def max_array(array, k)
+#   return [array.max] if k == 1
+
+#   new_array = array.slice(0, array.size)
+
+#   while new_array.size > k
+#     i = 0
+#     while i < new_array.size - 1
+#       if new_array[i] < new_array[i + 1]
+#         new_array.delete_at(i)
+#         break
+#       end
+#       i += 1
+#     end
+
+#     if (i == new_array.size - 1) && new_array.size > k
+#       if new_array[i - 1] < new_array[i]
+#         new_array.delete_at(i - 1)
+#       else
+#         new_array.delete_at(i)
+#       end
+#     end
+#   end
+
+#   new_array
+# end
+
+# Optimize max array
 def max_array(array, k)
-  return [array.max] if k == 1
+  n = array.size
+  k = n - k
 
-  new_array = array.slice(0, array.size)
+  return [] if k >= n
 
-  while new_array.size > k
-    i = 0
-    while i < new_array.size - 1
-      if new_array[i] < new_array[i + 1]
-        new_array.delete_at(i)
-        break
-      end
-      i += 1
+  result = []
+
+  array.each do |num|
+    while k!= 0 && !result.empty? && result.last < num
+      result.pop
+      k -= 1
     end
-
-    if (i == new_array.size - 1) && new_array.size > k
-      if new_array[i - 1] < new_array[i]
-        new_array.delete_at(i - 1)
-      else
-        new_array.delete_at(i)
-      end
-    end
+    result << num
+  end
+  
+  while !result.empty? && k > 0
+    result.pop
+    k -= 1
   end
 
-  new_array
+  return result
 end
 
 def compare(a1, i, a2, j)
