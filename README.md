@@ -19,11 +19,13 @@
 ## Problems on leetcode
 - `Two sum`
 - `Two sum` 2
-- `Two sum` 3 using hash table to store the value
-- `Two sum` 3 using array to store the value - sort - two pointers
+- `Two sum` 3
+  - [x] Used hash table to store the value
+  - [x] Used array to store the value - sort - two pointers
 - `Add Two Number`
-- Length of `longest substring` - O(n) 2 loops, O(1) space
-- Length of `longest substring` - O(n) 1 loops, O(1) space
+- Length of `longest substring`
+  - [x] O(n) 2 loops, O(1) space
+  - [x] O(n) 1 loops, O(1) space
 - Next `permutation` O(n), in space
 - Find `median of two sorted arrays, same size` Olog(n), n is size of array
 - Find `median of two sorted arrays, different size` Olog(n), n is size of array
@@ -36,3 +38,5 @@
 - `Third maximum numbers`
 - Find `kth largest number`
 - Remove `k digits` to return the `smallest number` (**optimized**)
+- Longest `Palindrome` problem
+  [x] O(n^2) solution
