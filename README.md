@@ -39,4 +39,5 @@
 - Find `kth largest number`
 - Remove `k digits` to return the `smallest number` (**optimized**)
 - Longest `Palindrome` problem
-  [x] O(n^2) solution
+  [x] O(n^3) solution Brute force
+  [x] O(n^2) solution Expand from mid
